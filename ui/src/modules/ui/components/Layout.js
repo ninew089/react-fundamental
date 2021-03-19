@@ -25,7 +25,7 @@ export default function Layout() {
     palette: {
       type: darkMode ? 'dark' : 'light',
       primary: {
-        main: '#1abc9c',
+        main: '#fff',
       },
     },
   })
