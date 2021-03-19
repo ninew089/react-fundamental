@@ -5,7 +5,7 @@ import {
   ThemeProvider,
 } from '@material-ui/core/styles'
 import { CssBaseline, useMediaQuery } from '@material-ui/core'
-
+import 'index.css'
 import * as actions from '../actions'
 import Header from './Header'
 import Content from './Content'
@@ -27,6 +27,9 @@ export default function Layout() {
       primary: {
         main: '#fff',
       },
+    },
+    typography: {
+      fontFamily: ['Prompt', 'sans-serif'].join(','),
     },
   })
 

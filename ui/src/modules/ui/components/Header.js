@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { ShoppingCart } from '@material-ui/icons'
 
 import logo from 'assets/images/logo.png'
+import logoDark from 'assets/images/logo-dark.png'
 import * as actions from '../actions'
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +44,11 @@ export default function Header() {
   const toggleDarkMode = () => dispatch(actions.toggleDarkMode())
 
   return (
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar
+      position="fixed"
+      className={classes.appBar}
+      color={!darkMode ? 'primary' : 'default'}
+    >
       <Toolbar>
         <Link
           component={RouterLink}
@@ -52,7 +57,11 @@ export default function Header() {
           underline="none"
           className={classes.logoLink}
         >
-          <img src={logo} alt="Babel Shopping" className={classes.logoImage} />
+          <img
+            src={darkMode ? logoDark : logo}
+            alt="Babel Shopping"
+            className={classes.logoImage}
+          />
         </Link>
         <Link
           component={RouterLink}
