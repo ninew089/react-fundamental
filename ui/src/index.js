@@ -5,7 +5,7 @@ import axios from 'axios'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 
-axios.defaults.baseURL = 'https://react-fundamental-api.vercel.app/'
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 ReactDOM.render(
   <React.StrictMode>
